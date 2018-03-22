@@ -1,5 +1,20 @@
 $(document).ready(function(){
-	var s = skrollr.init();
-	// $(".page-header").stick_in_parent();
 	new QRCode(document.getElementById("qr"), {text: "1234567", width: 180, height: 180});
+	var pageContent = $('.page-content');
+	var pageHeaderHeight = $('.page-header').height();
+	$(window).bind('scroll', function() {
+      
+      var scrollTop = $(window).scrollTop();
+      var elementOffset = pageContent.offset().top;
+      var currentElementOffset = (elementOffset - scrollTop);
+      var diffRatio = currentElementOffset / elementOffset;
+      
+      if(diffRatio >= 0){
+      	$('.qr').css("opacity", diffRatio);
+      	if(diffRatio <= 0.5){
+      		$('.qr').css("opacity", 0);
+      	}
+      	$('.page-header').css("height", pageHeaderHeight * diffRatio + "px");
+      }
+   });
 });
