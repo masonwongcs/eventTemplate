@@ -4,13 +4,14 @@ $(document).ready(function(){
 		e.preventDefault();
 		if($(this).hasClass("active")){
 			TweenMax.to($('.page-header'), 0.3, { height: 50 });
-			TweenMax.to($('.page-header .qr'), 0.3, { filter: "blur(3px)" });
+			TweenMax.to($('.page-header .qr-container'), 0.3, { filter: "blur(5px)" });
 			TweenMax.to($('.page-header'), 0.3, { rotationX: 0 });
 			TweenMax.to($('.page-content'), 0.3, { rotationX: 0 });
 			$(this).removeClass("active");
+			$(this).parents(".ticket-wrapper").addClass("collapsed");
 		} else{
 			TweenMax.to($('.page-header'), 0.3, { height: 250});
-			TweenMax.to($('.page-header .qr'), 0.3, { filter: "blur(0)" });
+			TweenMax.to($('.page-header .qr-container'), 0.3, { filter: "blur(0)" });
 			TweenMax.to($('.page-header'), 0.3, { rotationX: -2 });
 			TweenMax.to($('.page-content'), 0.3, { rotationX: 1 });
 			setTimeout(function(){
@@ -19,6 +20,7 @@ $(document).ready(function(){
 			}, 300);
 			
 			$(this).addClass("active");
+			$(this).parents(".ticket-wrapper").removeClass("collapsed");
 		}
 		
 	})
