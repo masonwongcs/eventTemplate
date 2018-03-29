@@ -8,6 +8,63 @@ html, body{
 	background-color: #582c6c;
 }
 
+.container{
+	position: fixed;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+	right: 0;
+	width: 250px;
+	margin: auto;
+	color: #fff;
+	text-align: center;
+	padding: 1rem;
+	border: 2px solid rgba(255,255,255,0.5);
+	border-radius: 0.5rem;
+}
+
+.container .redeem-title{
+	font-size: 2rem;
+	text-align: center;
+	border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+
+.container .redeem-content{
+	padding: 1rem 0;
+}
+
+.container .redeem-content label{
+	font-size: 0.75rem;
+	color: rgba(255,255,255,0.6);
+	display: block;
+	padding-bottom: 0.25rem;
+}
+
+.container .redeem-content span{
+	display: block;
+	margin-bottom: 1.5rem;
+}
+
+.container .redeem-btn{
+	display: block;
+	width: 90%;
+	margin: 1rem auto;
+	height: 3rem;
+	background-color: #fff;
+	color: #8e44ad;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	outline: 0;
+	border: 0;
+	font-size: 1rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	transition-timing-function: ease-in-out;
+	transition-duration: 200ms;
+	border-radius: 0.25rem;
+}
+
 .reward-wrapper{
 	background-color: #fff;
 	max-width: 320px;
@@ -22,6 +79,7 @@ html, body{
 	padding: 1rem;
 	overflow: hidden;
 	box-sizing: border-box;
+	display: none;
 }
 
 .reward-wrapper:before{
