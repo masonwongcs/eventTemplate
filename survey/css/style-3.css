@@ -65,6 +65,7 @@ body{
 	max-width: 400px;
 	margin: auto;
 	box-shadow: 0 0 4px rgba(0,0,0,0.1);
+	overflow: hidden;
 }
 
 .survey-container:before{
@@ -78,7 +79,7 @@ body{
 	opacity: 0.1;
 }
 
-@media screen and (max-width: 375px){
+@media screen and (max-width: 450px){
 	body{
 		padding: 0 !important;
 	}
@@ -137,7 +138,7 @@ body{
 	top: 0;
 	left: -25%;
 	right: 0;
-	height: 300px;
+	height: 40%;
 	width: 150%;
 	border-radius: 0 0 350% 350%;
 	z-index: -1;
@@ -145,7 +146,7 @@ body{
 }
 
 .survey-container .question-cover .title{
-	margin: 330px 2rem 1rem;
+	margin: 45vh 2rem 1rem;
 	display: block;
 	font-size: 1.75rem;
 	color: #F39C12;
@@ -178,7 +179,7 @@ body{
 }
 
 .survey-container .question{
-	padding: 2rem;
+	padding: 2rem 2rem 5rem 2rem;
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -434,4 +435,12 @@ body{
 	height: 12rem;
 	margin: auto;
 	transform-style: preserve-3d;
+}
+
+.ui.form input:not([type]):focus, .ui.form input[type=date]:focus, .ui.form input[type=datetime-local]:focus, .ui.form input[type=email]:focus, .ui.form input[type=file]:focus, .ui.form input[type=number]:focus, .ui.form input[type=password]:focus, .ui.form input[type=search]:focus, .ui.form input[type=tel]:focus, .ui.form input[type=text]:focus, .ui.form input[type=time]:focus, .ui.form input[type=url]:focus, .ui.selection.dropdown:focus, .ui.selection.active.dropdown, .ui.selection.active.dropdown .menu, .ui.form textarea:focus{
+	border-color: rgba(255,195,0, 0.4) !important;
+}
+
+.ui.selection.dropdown .menu>.item{
+	border-top: 1px solid rgba(255,195,0, 0.4) !important;
 }
