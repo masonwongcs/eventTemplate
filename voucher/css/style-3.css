@@ -1,242 +1,171 @@
 :root{
 	font-size: 16px;
-	font-family: 'Arial', san-serif;
+	font-family: 'Ubuntu', sans-serif;
+	--main-color-1: #F39C12;
 }
 
 html, body{
 	margin: 0;
-	position: relative;
-	background-color: #F4511E;
+	min-height: 100%;
+	height: 100%;
+	background-color: #fafafa;
 }
 
-.ticket-wrapper{
-	position: absolute;
-	top: 5vh;
-	left: 50%;
-	transform: translate(-50%, 0);
-	width: calc(100% - 48px - 48px);
+.voucher-wrapper{
+	width: 500px;
 	height: auto;
-	perspective: 100px;
-	transition: all 200ms ease-in-out;
-	min-width: 300px;
-	max-width: 400px;
-	margin-bottom: 5vh;
-}
-
-.ticket-wrapper.collapsed{
-	top: 50vh;
-	transform: translate(-50%, -50%);
-}
-
-.page-header{
-	background: #fff;
-	/*margin: 48px 48px 0;*/
-	height: 60px;
-	min-height: 50px;
 	position: relative;
-	overflow: hidden;
-	box-shadow: 0 0 48px rgba(0,0,0,0.5);
-	transform-style: preserve-3d;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 50%;
+	transform: translateY(-50%);
+	border-radius: 0.25rem;
+	perspective: 500px;
 }
 
-.page-header:before{
+.voucher-wrapper:after{
+	content: '';
+	clear: both;
+	display: table;
+}
+
+.voucher-wrapper .voucher-left{
+	float: left;
+	width: 45%;
+	max-width: 45%;
+	background: url(../img/bg.png) center / cover no-repeat;
+	opacity: 0.5;
+	min-height: 300px;
+	box-shadow: -4px 4px 16px rgba(55,55,55,0.25);
+	display: table;
+	position: relative;
+	transform-style: preserve-3d;
+	transform-origin: right;
+}
+
+.voucher-wrapper .voucher-right{
+	float: right;
+	width: 55%;
+	max-width: 55%;
+	background-color: var(--main-color-1);
+	min-height: 300px;
+	box-shadow: 4px 4px 16px rgba(55,55,55,0.25);
+	display: table;
+	position: relative;
+	color: #fff;
+	transform-style: preserve-3d;
+	transform-origin: left;
+}
+
+.voucher-wrapper .voucher-right:before{
 	content: '';
 	position: absolute;
+	top: 0;
+	right: 5%;
 	bottom: 0;
 	left: 0;
-	width: 100%;
-	height: 30px;
-	background: linear-gradient(to bottom, rgba(255,255,255,0.01) 0%,rgba(55,55,55,0.5) 100%);
-	will-change: opacity;
-	transition: opacity 200ms ease-in-out
+	height: 90%;
+	margin: auto;
+	border: 4px solid rgba(255,255,255,0.2);
+	border-left: 0;
 }
 
-.page-header.active:before{
-	opacity: 0;
-} 
-
-.page-header .left{
-	position: fixed;
-	top: 15px;
-	left: 20px;
-	display: block;
-	z-index: 3;
+.voucher-wrapper .price{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 3.25rem;
+	font-weight: bold;
+	text-transform: uppercase;
 }
 
-.page-header .right{
+.voucher-wrapper .price .price-desc{
+	font-size: 2rem;
+}
+
+.voucher-wrapper .voucher-brand{
 	position: absolute;
-	top: 10px;
-	right: 10px;
-	display: block;
-	z-index: 3;
-}
-
-.page-header .menu-toggle{
-	width: 24px;
-	height: 24px;
-	color: #fff;
-	position: fixed;
-	top: 15px;
-	left: 20px;
-	display: block;
-	z-index: 3;
-}
-
-.menu-toggle{
-	width: 24px;
-	height: 24px;
-	color: #fff;
-	position: fixed;
-	top: 15px;
-	left: 20px;
-	display: block;
-	z-index: 3;
-}
-
-.page-header .menu-toggle > svg{
-	width: 100%;
-	height: 100%;
-}
-
-.page-header .printer{
-	width: 24px;
-	height: 24px;
-	color: #fff;
-	background-color: #999;
-	padding: 4px;
-	border-radius: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.page-header .printer > svg{
-	width: 80%;
-	height: 80%;
-}
-
-.page-header .qr{
-	position: relative;
-	height: 100%;
+	top: 23%;
+	left: 0;
+	right: 0;
+	margin: auto;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1rem;
 	z-index: 1;
 }
 
-/*.page-header.active .qr{
-	filter: blur(0);
-}
-*/
-.page-header .qr-container{
-	width: 180px;
-	height: 180px;
+.voucher-wrapper .voucher-brand:before{
+	content: '';
 	position: absolute;
-	top: 50%;
+	width: 80%;
 	left: 0;
 	right: 0;
+	border-top: 3px solid #fff;
+	top: 35%;
 	margin: auto;
-	transform: translateY(-50%);
-	background-color: #fff;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	filter: blur(5px);
-	transition: all 400ms ease-in-out;
+	z-index: -1;
 }
 
-.page-header .qr-container img{
-	width: 100%;
-	height: 100%;
-}
-
-.page-header .qr-text{
+.voucher-wrapper .voucher-brand:after{
+	content: '';
 	position: absolute;
-	bottom: 9px;
+	width: 50%;
+	height: 1rem;
 	left: 0;
 	right: 0;
-	width: 100px;
+	top: 33%;
+	margin: auto;
+	background-color: var(--main-color-1);
+	z-index: -1;
+}
+
+.voucher-wrapper .voucher-title{
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	text-transform: uppercase;
+	font-size: 2.75rem;
+	font-weight: bold;
+	position: relative;
+}
+
+.voucher-wrapper .voucher-footer{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 10%;
 	margin: auto;
 	text-align: center;
-	color: #fff;
-	padding: 6px 24px;
-	border-radius: 20px;
-	background-color: rgba(255,87,34,0.7);
-}
-
-.page-header.active .qr-text{
-	color: #999;
-	bottom: 9px;
-	padding: 0;
-	background-color: transparent;
-}
-
-.page-header .qr-text.fixed{
-	position: fixed;
-	top: 0;
-	opacity: 1;
-}
-
-.page-content{
-	background: #fff;
-	position: relative;
-	box-shadow: 0 0 48px rgba(0,0,0,0.5);
-	/*margin: 0 48px 48px;*/
-	transform-style: preserve-3d;
-}
-
-.form{
-	padding: 24px;
-}
-
-.form-item{
-	margin-bottom: 1rem;
-}
-
-.form-item .form-label{
-	display: block;
 	font-size: 0.8rem;
-	padding-bottom: 4px;
-	color: #999;
 }
 
-.form-item .form-input{
-	font-size: 1rem;
-}
 
-.form-item .form-input-action{
-	color: #FFC300;
-}
+@media screen and (max-width: 450px){
+	.voucher-wrapper{
+		width: 330px;
+		height: auto;
+		min-height: 250px;
+	}
 
-.form-item .form-input-action a{
-	color: #FFC300;
-	text-decoration: none;
-}
+	.voucher-wrapper .price{
+		font-size: 2rem;
+	}
 
-.top-form{
-	display: flex;
-	background-color: #FF5722;
-	height: 50px;
-	padding: 0 24px;
-	align-items: center;
-}
+	.voucher-wrapper .voucher-brand{
+		font-size: 0.8rem;
+	}
 
-.top-form .form-item {
-	margin-bottom: 0;
-}
+	.voucher-wrapper .voucher-brand:after{
+		width: 60%;
+	}
 
-.top-form .form-item:not(:last-child) {
-	margin-right: 4px;
-}
+	.voucher-wrapper .voucher-title{
+		font-size: 1.75rem;
+	}
 
-.top-form .form-item:last-child {
-	margin-left: auto;
-}
-
-.top-form .form-item .form-label{
-	color: #ccc;
-	font-size: 10px;
-}
-
-.top-form .form-item .form-input{
-	color: #fff;
-	font-size: 12px;
-	font-weight: bold;
+	.voucher-wrapper .voucher-footer{
+		font-size: 0.6rem;
+	}
 }

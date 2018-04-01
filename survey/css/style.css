@@ -189,6 +189,14 @@ body:before{
 	color: #fff;
 }
 
+.ui.form input:not([type]):focus, .ui.form input[type=date]:focus, .ui.form input[type=datetime-local]:focus, .ui.form input[type=email]:focus, .ui.form input[type=file]:focus, .ui.form input[type=number]:focus, .ui.form input[type=password]:focus, .ui.form input[type=search]:focus, .ui.form input[type=tel]:focus, .ui.form input[type=text]:focus, .ui.form input[type=time]:focus, .ui.form input[type=url]:focus, .ui.selection.dropdown:focus, .ui.selection.active.dropdown, .ui.selection.active.dropdown .menu, .ui.form textarea:focus{
+	border-color: rgba(228,62,80, 0.4) !important;
+}
+
+.ui.selection.dropdown .menu>.item{
+	border-top: 1px solid rgba(228,62,80, 0.4) !important;
+}
+
 .popup{
 	display: none;
 }
