@@ -105,7 +105,7 @@ body:before{
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	background: linear-gradient(135deg, var(--main-color-1) 0%, var(--main-color-2) 100% );
-	background-size: 200%;
+	background-size: 200% 100%;
 	background-position: 0px 0px;
 	border-radius: 0.5rem;
 	border: 0;

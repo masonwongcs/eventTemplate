@@ -34,7 +34,7 @@ html, body{
 	float: left;
 	width: 45%;
 	max-width: 45%;
-	background: url(../img/bg.png) center / cover no-repeat;
+	background: #fff url(../img/bg.png) center / cover no-repeat;
 	opacity: 0.5;
 	min-height: 300px;
 	box-shadow: -4px 4px 16px rgba(55,55,55,0.25);
@@ -151,6 +151,10 @@ html, body{
 
 	.voucher-wrapper .price{
 		font-size: 2rem;
+	}
+
+	.voucher-wrapper .price .price-desc{
+		font-size: 1.5rem;
 	}
 
 	.voucher-wrapper .voucher-brand{
