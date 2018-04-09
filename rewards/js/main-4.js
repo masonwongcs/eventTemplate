@@ -1,17 +1,17 @@
 $(document).ready(function () {
-    $('.btn').click(function () {
+    $(".rewards-wrapper").click(function () {
         var random_boolean = Math.random() >= 0.5;
-        var that = $(this);
         $(this).addClass('loading');
+        var that = $(this);
+
+        // setTimeout to demonstrate the actual behavior while getting true/false result
         setTimeout(function () {
             that.removeClass('loading');
-            that.text("OK");
             if(random_boolean){
                 showMessage(random_boolean, "You won the rewards");
             } else{
                 showMessage(random_boolean, "Try again next time");
             }
-
         }, 2000);
     })
 });
@@ -19,6 +19,7 @@ $(document).ready(function () {
 //Params : (Success or Failed) , Message
 function showMessage(isSuccess, message) {
     var isSuccess = isSuccess, rewardsWrapper = $(".rewards-wrapper"), rewardsIcon;
+    rewardsWrapper.addClass('animate');
     if (isSuccess) {
         rewardsWrapper.addClass("success");
         rewardsIcon = rewardsWrapper.find(".rewards-icon svg.success-icon");

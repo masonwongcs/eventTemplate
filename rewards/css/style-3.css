@@ -28,6 +28,7 @@ html, body{
 	box-shadow: 0 4px 16px rgba(55,55,55,0.25);
 	border-radius: 0.5rem;
 	padding: 1rem;
+    background-color: #fff;
 }
 
 
@@ -55,14 +56,30 @@ html, body{
 	animation: tada 1s linear infinite;
 }
 
+.rewards-wrapper .rewards-icon svg.success-icon,
+.rewards-wrapper .rewards-icon svg.failed-icon{
+    opacity: 0;
+}
+
 .rewards-wrapper .rewards-icon svg,
 .rewards-wrapper .rewards-icon img {
 	width: 100%;
 	height: 100%;
+    position: absolute;
 }
 
-.rewards-wrapper .rewards-icon svg path{
+.rewards-wrapper .rewards-icon svg.gift path{
 	fill: var(--main-color-1);
+}
+
+.rewards-wrapper.success .rewards-icon,
+.rewards-wrapper.failed .rewards-icon{
+    animation: initial;
+}
+
+.rewards-wrapper.success svg.gift,
+.rewards-wrapper.failed svg.gift{
+    opacity: 0;
 }
 
 .rewards-wrapper .content-message{
@@ -123,6 +140,11 @@ html, body{
 	animation: rotate 1s linear infinite;
 }
 
+.rewards-wrapper .btn.disabled{
+    opacity: 0.4;
+    pointer-events: none;
+}
+
 @keyframes rotate {
 	to{
 		transform: rotate(360deg);
@@ -160,4 +182,15 @@ html, body{
 		-webkit-transform: scale3d(1, 1, 1);
 		transform: scale3d(1, 1, 1);
 	}
+}
+
+@media screen and (max-width: 450px){
+    .rewards-wrapper{
+        width: 100%;
+        height: 100%;
+        max-width: initial;
+        transform: unset;
+        padding: 0;
+        top: 0;
+    }
 }
