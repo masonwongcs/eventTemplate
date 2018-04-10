@@ -21,7 +21,10 @@ html, body{
 	right: 0;
 	margin: auto;
 	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
+	-webkit-perspective: 100px;
 	perspective: 100px;
 }
 
@@ -29,13 +32,20 @@ html, body{
 	width: 500px;
 	height: 300px;
 	background-color: #ececec;
+	-webkit-transform: scale(0.7);
+	-ms-transform: scale(0.7);
 	transform: scale(0.7);
+	-webkit-transition: all 400ms ease-in-out;
+	-o-transition: all 400ms ease-in-out;
 	transition: all 400ms ease-in-out;
+	-webkit-perspective: 500px;
 	perspective: 500px;
 	cursor: pointer;
 }
 
 .envelope.animate{
+	-webkit-transform: translateY(50px);
+	-ms-transform: translateY(50px);
 	transform: translateY(50px);
 }
 
@@ -44,23 +54,32 @@ html, body{
 }
 
 .envelope.animate .cover:before{
+	-webkit-transform: rotateX(0);
 	transform: rotateX(0);
 }
 
 .envelope .content.animate{
+	-webkit-transform: translateY(0);
+	-ms-transform: translateY(0);
 	transform: translateY(0);
 }
 
 .envelope.view-content .cover{
+	-webkit-transform: translateY(100vh);
+	-ms-transform: translateY(100vh);
 	transform: translateY(100vh);
 }
 
 .envelope.view-content {
 	background-color: transparent;
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
 	transform: scale(1);
 }
 
 .envelope.view-content .front{
+	-webkit-transform: translateY(100vh);
+	-ms-transform: translateY(100vh);
 	transform: translateY(100vh);
 }
 
@@ -85,7 +104,10 @@ html, body{
 	position: absolute;
 	top: -150px;
 	z-index: 3;
+	-webkit-perspective: 500px;
 	perspective: 500px;
+	-webkit-transition: all 200ms ease-in;
+	-o-transition: all 200ms ease-in;
 	transition: all 200ms ease-in;
 }
 
@@ -97,9 +119,15 @@ html, body{
 	border-style: solid;
 	border-width: 0 250px 150px 250px;
 	border-color: transparent transparent var(--main-color-2) transparent;
+	-webkit-transform-origin: bottom;
+	-ms-transform-origin: bottom;
 	transform-origin: bottom;
+	-webkit-transform: rotateX(180deg);
 	transform: rotateX(180deg);
+	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
+	-webkit-transition: all 200ms ease-in;
+	-o-transition: all 200ms ease-in;
 	transition: all 200ms ease-in;
 	/*transition-delay: 1s;*/
 	z-index: 1;
@@ -114,11 +142,18 @@ html, body{
 	height: 100%;
 	margin: auto;
 	border: 12px solid #fff;
+	-webkit-box-shadow: 0 4px 16px rgba(55,55,55,0.25);
 	box-shadow: 0 4px 16px rgba(55,55,55,0.25);
+	-webkit-transform: translateY(50px) scale(0.9);
+	-ms-transform: translateY(50px) scale(0.9);
 	transform: translateY(50px) scale(0.9);
+	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
+	-webkit-transition: all 200ms ease-in-out;
+	-o-transition: all 200ms ease-in-out;
 	transition: all 200ms ease-in-out;
 	z-index: 1;
+	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 	overflow: hidden;
 }
@@ -189,6 +224,8 @@ html, body{
 	width: 100%;
 	background-color: rgba(255,255,255,0.8);
 	z-index: 2;
+	-webkit-transition: all 200ms ease-in;
+	-o-transition: all 200ms ease-in;
 	transition: all 200ms ease-in;
 }
 
@@ -249,14 +286,32 @@ html, body{
 	}
 }
 
-@keyframes slideInOut {
+@-webkit-keyframes slideInOut {
 	0%{
+		-webkit-transform: translateY(50px);
 		transform: translateY(50px);
 	}
 	50%{
+		-webkit-transform: translateY(-250px);
 		transform: translateY(-250px);
 	}
 	100%{
+		-webkit-transform: translateY(50px);
+		transform: translateY(50px);
+	}
+}
+
+@keyframes slideInOut {
+	0%{
+		-webkit-transform: translateY(50px);
+		transform: translateY(50px);
+	}
+	50%{
+		-webkit-transform: translateY(-250px);
+		transform: translateY(-250px);
+	}
+	100%{
+		-webkit-transform: translateY(50px);
 		transform: translateY(50px);
 	}
 }
