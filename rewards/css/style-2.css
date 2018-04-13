@@ -1,11 +1,15 @@
 :root{
 	font-size: 16px;
 	font-family: 'Varela Round', sans-serif;
+	--bg-color: #582c6c;
+	--main-color-1: #8e44ad;
+	--main-color-2: #e74c3c;
+	--sec-color-1: #FFC300;
 }
 
 html, body{
 	margin: 0;
-	background-color: #582c6c;
+	background-color: var(--bg-color);
 }
 
 .container{
@@ -49,7 +53,7 @@ html, body{
 
 .container .link{
 	text-decoration: none;
-	color: #FFC300;
+	color: var(--sec-color-1);
 }
 
 .container .redeem-btn{
@@ -58,7 +62,7 @@ html, body{
 	margin: 1rem auto;
 	height: 3rem;
 	background-color: #fff;
-	color: #8e44ad;
+	color: var(--main-color-1);
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
@@ -102,9 +106,9 @@ html, body{
 
 .reward-wrapper:before{
 	content: '';
-	background: -webkit-linear-gradient(315deg, #8e44ad 0%, #e74c3c 100% );
-	background: -o-linear-gradient(315deg, #8e44ad 0%, #e74c3c 100% );
-	background: linear-gradient(135deg, #8e44ad 0%, #e74c3c 100% );
+	background: -webkit-linear-gradient(315deg, var(--main-color-1) 0%, var(--main-color-2) 100% );
+	background: -o-linear-gradient(315deg, var(--main-color-1) 0%, var(--main-color-2) 100% );
+	background: linear-gradient(135deg, var(--main-color-1) 0%, var(--main-color-2) 100% );
 	position: absolute;
 	top: 0;
 	left: -25%;
@@ -149,7 +153,7 @@ html, body{
 
 .success .success-icon{
 	border-radius: 50%;
-	background-color: #582c6c;
+	background-color: var(--bg-color);
 	padding: 2rem;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
@@ -175,7 +179,7 @@ html, body{
 	width: 90%;
 	margin: auto;
 	height: 3rem;
-	background-color: #8e44ad;
+	background-color: var(--main-color-1);
 	color: #fff;
 	-webkit-appearance: none;
 	-moz-appearance: none;
@@ -254,9 +258,9 @@ html, body{
 	width: 90%;
 	margin: auto;
 	height: 3rem;
-	background: -webkit-linear-gradient(315deg, #8e44ad 0%, #e74c3c 100% );
-	background: -o-linear-gradient(315deg, #8e44ad 0%, #e74c3c 100% );
-	background: linear-gradient(135deg, #8e44ad 0%, #e74c3c 100% );
+	background: -webkit-linear-gradient(315deg, var(--main-color-1) 0%, var(--main-color-2) 100% );
+	background: -o-linear-gradient(315deg, var(--main-color-1) 0%, var(--main-color-2) 100% );
+	background: linear-gradient(135deg, var(--main-color-1) 0%, var(--main-color-2) 100% );
 	color: #fff;
 	-webkit-appearance: none;
 	-moz-appearance: none;
