@@ -1,12 +1,14 @@
 :root{
 	font-size: 16px;
-	font-family: 'Arial', san-serif;
+	font-family: 'Varela Round', sans-serif;
+	--main-color-1: #F7CE30;
+	--main-color-2: #FFC300;
 }
 
 html, body{
 	margin: 0;
 	position: relative;
-	background-color: #F7CE30;
+	background-color: var(--main-color-1);
 }
 
 .page-wrapper{
@@ -39,7 +41,7 @@ html, body{
 	left: -10px;
 	width: 20px;
 	height: 20px;
-	background-color: #F7CE30;
+	background-color: var(--main-color-1);
 	border-radius: 50%;
 	z-index: 1;
 }
@@ -51,7 +53,7 @@ html, body{
 	right: -10px;
 	width: 20px;
 	height: 20px;
-	background-color: #F7CE30;
+	background-color: var(--main-color-1);
 	border-radius: 50%;
 	z-index: 1;
 }
@@ -193,10 +195,10 @@ html, body{
 }
 
 .form-item .form-input-action{
-	color: #FFC300;
+	color: var(--main-color-2);
 }
 
 .form-item .form-input-action a{
-	color: #FFC300;
+	color: var(--main-color-2);
 	text-decoration: none;
 }

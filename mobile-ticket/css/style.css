@@ -1,15 +1,17 @@
 :root{
 	font-size: 16px;
-	font-family: 'Arial', san-serif;
+	font-family: 'Varela Round', sans-serif;
+	--main-color-1: #E43E50;
+	--main-color-2: #EC6C49;
+	--sec-color-1: #FFC300;
 }
 
 html, body{
 	margin: 0;
-	/*min-height: 100vh;*/
 }
 
 .page-header{
-	background: linear-gradient(to bottom, #E43E50 0%, #EC6C49 100%);
+	background: linear-gradient(to bottom, var(--main-color-1) 0%, var(--main-color-2) 100%);
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -131,10 +133,10 @@ html, body{
 }
 
 .form-item .form-input-action{
-	color: #FFC300;
+	color: var(--sec-color-1);
 }
 
 .form-item .form-input-action a{
-	color: #FFC300;
+	color: var(--sec-color-1);
 	text-decoration: none;
 }
