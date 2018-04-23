@@ -29,6 +29,19 @@ html, body{
 	border-radius: 0.5rem;
 }
 
+.container .image{
+	width: 70%;
+	margin: auto;
+	overflow: hidden;
+	max-height: 300px;
+	border-radius: 0.5rem;
+}
+
+.container .image img{
+	width: 100%;
+	height: auto;
+}
+
 .container .redeem-title{
 	font-size: 2rem;
 	text-align: center;
