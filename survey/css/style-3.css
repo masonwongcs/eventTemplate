@@ -386,6 +386,50 @@ body{
 	transform: scale(1) translateY(-50%);
 }
 
+
+.emoji-rate{
+	display: flex;
+	margin: 0.5rem auto;
+	border: 2px solid #ececec;
+	border-radius: 0.5rem;
+}
+
+.emoji-rate > .emoji-checkbox{
+	flex-grow: 1;
+}
+
+.emoji-rate > .emoji-checkbox:not(:last-child){
+	border-right: 2px solid #ececec;
+}
+
+.emoji-rate input[type=radio]{
+	display: none;
+}
+
+.emoji-rate input[type=radio] + label{
+	display: block;
+}
+
+.emoji-rate input[type=radio] + label span{
+	display: block;
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	transition: all 200ms ease-in-out;
+	color: #999;
+	text-align: center;
+}
+
+.emoji-rate input[type=radio] + label span svg{
+	width: 20px;
+	height: 20px;
+	margin: 10px auto;
+}
+
+.emoji-rate input[type=radio]:checked + label span{
+	background-color: rgba(243, 156, 18, 0.1);
+}
+
 .popup{
 	display: none;
 }

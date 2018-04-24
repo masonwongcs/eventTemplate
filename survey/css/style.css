@@ -219,6 +219,45 @@ body:before{
 	border-top: 1px solid rgba(228,62,80, 0.4) !important;
 }
 
+.emoji-rate{
+	display: flex;
+	margin: 0.5rem auto;
+}
+
+.emoji-rate > .emoji-checkbox{
+	flex-grow: 1;
+}
+
+.emoji-rate input[type=radio]{
+	display: none;
+}
+
+.emoji-rate input[type=radio] + label{
+	display: block;
+}
+
+.emoji-rate input[type=radio] + label span{
+	display: block;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: #ececec;
+	margin: auto;
+	transition: all 200ms ease-in-out;
+	color: #999;
+}
+
+.emoji-rate input[type=radio] + label span svg{
+	width: 20px;
+	height: 20px;
+	margin: 10px;
+}
+
+.emoji-rate input[type=radio]:checked + label span{
+	background-color: #E43E50;
+	color: #fff;
+}
+
 .popup{
 	display: none;
 }

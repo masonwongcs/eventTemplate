@@ -135,6 +135,46 @@ html, body {
     background-color: #fafafa;
 }
 
+.emoji-rate{
+    display: flex;
+    margin: 0.5rem auto;
+}
+
+.emoji-rate > .emoji-checkbox{
+    /*flex-grow: 1;*/
+    margin-right: 0.5rem;
+}
+
+.emoji-rate input[type=radio]{
+    display: none !important;
+}
+
+.emoji-rate input[type=radio] + label{
+    display: block;
+}
+
+.emoji-rate input[type=radio] + label span{
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.1);
+    margin: auto;
+    transition: all 200ms ease-in-out;
+    color: rgba(255,255,255,.2);
+}
+
+.emoji-rate input[type=radio] + label span svg{
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+}
+
+.emoji-rate input[type=radio]:checked + label span{
+    background-color: #FFC300;
+    color: #222;
+}
+
 .popup {
     display: none;
 }
