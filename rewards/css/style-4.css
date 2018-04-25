@@ -112,7 +112,7 @@ body:before{
 
 
 .rewards-wrapper .content-message{
-	margin: 250px 1rem 2rem;
+	margin: 220px 1rem 2rem;
 	color: #999;
 	text-align: center;
 	-webkit-transition: all 400ms ease-in-out;
@@ -127,6 +127,21 @@ body:before{
 	color: #666
 }
 
+.rewards-wrapper .content-message .title{
+	font-size: 1.25rem;
+	font-weight: bold;
+	color: var(--main-color-1);
+	margin-bottom: 1rem;
+}
+
+.rewards-wrapper .content-message .redemption-period{
+	margin-bottom: 1rem;
+}
+
+.rewards-wrapper .content-message .redemption-period label{
+	display: block;
+	font-size: 0.7rem;
+}
 
 .rewards-wrapper.animate .rewards-icon .cover{
 	-webkit-transform: translateY(-220px) rotate(1deg);
@@ -163,7 +178,7 @@ body:before{
 }
 
 .rewards-wrapper.loading .content-message{
-	font-size: 0;
+	transform: scale(0);
 }
 
 .rewards-wrapper .instruction{
