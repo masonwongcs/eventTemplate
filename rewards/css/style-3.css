@@ -52,8 +52,8 @@ html, body{
 	margin: auto;
 	left: 0;
 	right: 0;
-	-webkit-animation: tada 1s linear infinite;
-	animation: tada 1s linear infinite;
+	/*-webkit-animation: tada 1s linear infinite;*/
+	/*animation: tada 1s linear infinite;*/
 }
 
 .rewards-wrapper .rewards-icon svg.success-icon,
@@ -93,6 +93,34 @@ html, body{
 	max-height: 400px;
 	overflow: auto;
 }
+
+.rewards-wrapper .content-message .redeem-title{
+	font-size: 2rem;
+	text-align: center;
+	border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+
+.rewards-wrapper .content-message .redeem-content{
+	padding: 1rem 0;
+}
+
+.rewards-wrapper .content-message .redeem-content label{
+	font-size: 0.75rem;
+	color: #999;
+	display: block;
+	padding-bottom: 0.25rem;
+}
+
+.rewards-wrapper .content-message .redeem-content span{
+	display: block;
+	margin-bottom: 1.5rem;
+}
+
+.rewards-wrapper .content-message link{
+	text-decoration: none;
+	color: var(--sec-color-1);
+}
+
 
 .rewards-wrapper .content-message span{
 	font-weight: bold;
@@ -229,6 +257,82 @@ html, body{
 		-webkit-transform: scale3d(1, 1, 1);
 		transform: scale3d(1, 1, 1);
 	}
+}
+
+.popup{
+	display: none;
+}
+
+
+.popup:before{
+	content: '';
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 998;
+}
+
+.popup-container{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 350px;
+	height: auto;
+	max-height: 400px;
+	background-color: #fff;
+	border-radius: 0.5rem;
+	z-index: 999;
+	margin: auto;
+	padding: 1rem;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+.popup-container .popup-header{
+	font-size: 1rem;
+	font-weight: bold;
+	text-align: center;
+	border-bottom: 1px solid #ccc;
+}
+
+.popup-container .popup-content{
+	font-size: 0.8rem;
+	padding: 1rem 0.2rem;
+}
+
+.popup .popup-container .popup-close{
+	position: absolute;
+	bottom: 1rem;
+	left: 0;
+	right: 0;
+	display: block;
+	width: 90%;
+	margin: auto;
+	height: 3rem;
+	background: var(--main-color-1);
+	color: #fff;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	outline: 0;
+	border: 0;
+	font-size: 1rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	-webkit-transition-timing-function: ease-in-out;
+	-o-transition-timing-function: ease-in-out;
+	transition-timing-function: ease-in-out;
+	-webkit-transition-duration: 200ms;
+	-o-transition-duration: 200ms;
+	transition-duration: 200ms;
+	border-radius: 0.25rem;
+	margin: auto;
 }
 
 @media screen and (max-width: 450px){
